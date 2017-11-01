@@ -51,7 +51,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/acl-front-end';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://gruesome-eyeballs-71988.herokuapp.com/'
+    ENV.apiHost = 'https://gruesome-eyeballs-71988.herokuapp.com'
   }
 
   return ENV;
