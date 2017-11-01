@@ -1,12 +1,12 @@
 /* jshint node: true */
 
 module.exports = function (environment) {
-  'use strict';
-  const ENV = {
+  var ENV = {
     modulePrefix: 'acl-front-end',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -49,7 +49,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/acl-front-end';
     ENV.locationType = 'hash';
+    ENV.apiHost = 'https://gruesome-eyeballs-71988.herokuapp.com/'
   }
 
   return ENV;
