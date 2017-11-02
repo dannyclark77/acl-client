@@ -623,6 +623,15 @@ define('acl-front-end/tests/routes/users.jshint.lint-test', [], function () {
     assert.ok(true, 'routes/users.js should pass jshint.');
   });
 });
+define('acl-front-end/tests/routes/welcome.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | routes/welcome.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/welcome.js should pass jshint.');
+  });
+});
 define('acl-front-end/tests/serializers/application.jshint.lint-test', [], function () {
   'use strict';
 
@@ -918,6 +927,27 @@ define('acl-front-end/tests/unit/routes/users-test.jshint.lint-test', [], functi
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/users-test.js should pass jshint.');
+  });
+});
+define('acl-front-end/tests/unit/routes/welcome-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:welcome', 'Unit | Route | welcome', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('acl-front-end/tests/unit/routes/welcome-test.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/welcome-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/welcome-test.js should pass jshint.');
   });
 });
 define('acl-front-end/tests/unit/serializers/application-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
