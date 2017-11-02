@@ -5,7 +5,8 @@ export default Ember.Route.extend({
 
   actions: {
     submitWeek (week) {
-      this.transitionTo('weeks/' + week.number);
+      let number = week.number
+      this.transitionTo('week', number);
     }
   }
 });
