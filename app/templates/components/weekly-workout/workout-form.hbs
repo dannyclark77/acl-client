@@ -1,0 +1,9 @@
+<h5>Create new workout</h5>
+<form {{action 'createWorkout' on='submit'}}>
+  {{input placeholder='Week' value=newWorkout.week}}
+  {{input placeholder='Day of the Week' value=newWorkout.day}}
+  {{input placeholder='Exercise' value=newWorkout.exercise}}
+  {{input placeholder='Number of Sets' value=newWorkout.sets}}
+  {{input placeholder='Number of Reps' value=newWorkout.reps}}
+  <button type='submit'>Save</button>
+</form>
