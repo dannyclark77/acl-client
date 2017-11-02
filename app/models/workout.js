@@ -5,6 +5,6 @@ export default DS.Model.extend({
   day: DS.attr('string'),
   exercise: DS.attr('string'),
   sets: DS.attr('string'),
-  reps: DS.attr('string')
+  reps: DS.attr('string'),
   user: DS.belongsTo('user')
 });
