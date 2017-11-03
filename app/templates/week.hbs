@@ -1,4 +1,4 @@
-<div class='col-md-4'>
+<div class='col-md-3'>
   <h4>Month: </h4>
   <br />
   <div class='col-md-6'>
@@ -14,14 +14,6 @@
     <h6>Exercises: </h6>
   </div>
 </div>
-<div class='col-md-8'>
-  {{!-- {{#each model as |workout|}} --}}
-      {{!-- <li>Week: {{workout.week}}</li>
-      <li>Day: {{workout.day}}</li>
-      <li>Exercise: {{workout.exercise}}</li>
-      <li>Sets: {{workout.sets}}</li>
-      <li>Reps: {{workout.reps}}</li>
-      <br /> --}}
-    {{weekly-workout model=model createWorkout='createWorkout'}}
-  {{!-- {{/each}} --}}
+<div class='col-md-9'>
+  {{weekly-workout model=model createWorkout='createWorkout'}}
 </div>

@@ -1,17 +1,23 @@
 <h4>Weeks Post-Surgery: </h4>
 {{#each model as |workout|}}
-  <div class='col-md-3'>
-    <p>Day: {{workout.day}}</p>
-  </div>
-  <div class='col-md-3'>
-    <p>Exercise: {{workout.exercise}}</p>
-  </div>
-  <div class='col-md-3'>
-    <p>Sets: {{workout.sets}}</p>
-  </div>
-  <div class='col-md-3'>
-    <p>Reps: {{workout.reps}}</p>
-  </div>
+  <section class='workouts'>
+    <div class='button col-md-2'>
+      <button type='button' class='btn btn-danger btn-sm'>Delete</button>
+      <button type='button' class='btn btn-secondary btn-sm'>Update</button>
+    </div>
+    <div class='col-md-3'>
+      <p>Day: {{workout.day}}</p>
+    </div>
+    <div class='col-md-3'>
+      <p>Exercise: {{workout.exercise}}</p>
+    </div>
+    <div class='col-md-2'>
+      <p>Sets: {{workout.sets}}</p>
+    </div>
+    <div class='col-md-2'>
+      <p>Reps: {{workout.reps}}</p>
+    </div>
+  </section>
 {{/each}}
 <div class='col-md-12'>
   {{weekly-workout/workout-form createWorkout='createWorkout'}}
