@@ -1,8 +1,8 @@
 <h4>Weeks Post-Surgery: </h4>
 {{#each model as |workout|}}
-  <section class='workouts'>
-    <div class='button col-md-2'>
-      <button type='button' class='btn btn-danger btn-sm'>Delete</button>
+  <section id={{workout.id}} class='workouts'>
+    <div class='col-md-2'>
+      <button type='button' class='btn btn-danger btn-sm' {{action 'deleteWorkout' workout}}>Delete</button>
       <button type='button' class='btn btn-secondary btn-sm'>Update</button>
     </div>
     <div class='col-md-3'>

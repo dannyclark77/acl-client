@@ -8,6 +8,9 @@ export default Ember.Route.extend({
     createWorkout(workout) {
       let newWorkout = this.get('store').createRecord('workout', workout);
       newWorkout.save();
+    },
+    deleteWorkout(workout) {
+      workout.destroyRecord();
     }
   }
 });

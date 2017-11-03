@@ -5,6 +5,9 @@ export default Ember.Component.extend({
   actions: {
     createWorkout(workout) {
       return this.sendAction('createWorkout', workout)
+    },
+    deleteWorkout(workout) {
+      return this.sendAction('deleteWorkout', workout);
     }
   }
 });
