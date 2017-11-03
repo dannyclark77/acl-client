@@ -15,5 +15,13 @@
   </div>
 </div>
 <div class='col-md-8'>
-  {{weekly-workout createWorkout='createWorkout'}}
+  {{!-- {{#each model as |workout|}} --}}
+      {{!-- <li>Week: {{workout.week}}</li>
+      <li>Day: {{workout.day}}</li>
+      <li>Exercise: {{workout.exercise}}</li>
+      <li>Sets: {{workout.sets}}</li>
+      <li>Reps: {{workout.reps}}</li>
+      <br /> --}}
+    {{weekly-workout model=model createWorkout='createWorkout'}}
+  {{!-- {{/each}} --}}
 </div>
