@@ -1,3 +1,12 @@
 <h2>Enter Number of Weeks Since Surgery</h2>
 
+{{#each model as |workout|}}
+  <li>Week: {{workout.week}}</li>
+  <li>Day: {{workout.day}}</li>
+  <li>Exercise: {{workout.exercise}}</li>
+  <li>Sets: {{workout.sets}}</li>
+  <li>Reps: {{workout.reps}}</li>
+  <br />
+{{/each}}
+
 {{weeks-form submit="submitWeek"}}

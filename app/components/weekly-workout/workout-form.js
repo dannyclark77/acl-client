@@ -10,7 +10,7 @@ export default Ember.Component.extend({
   },
   actions: {
     createWorkout() {
-      console.log(this.get('newWorkout'));
+      return this.sendAction('createWorkout', this.get('newWorkout'));
     }
   }
 });

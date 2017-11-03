@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  week: DS.attr('integer'),
+  week: DS.attr('number'),
   day: DS.attr('string'),
   exercise: DS.attr('string'),
   sets: DS.attr('string'),
