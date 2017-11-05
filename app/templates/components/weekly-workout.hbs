@@ -1,4 +1,7 @@
 <h4>Weeks Post-Surgery: </h4>
+<div class='workout col-md-12'>
+  {{weekly-workout/workout-form createWorkout='createWorkout'}}
+</div>
 {{#each model as |workout|}}
   <section id={{workout.id}} class='workouts'>
     <div class='col-md-2'>
@@ -17,13 +20,10 @@
     <div class='col-md-2'>
       <p>Reps: {{workout.reps}}</p>
     </div>
-    <div class='col-md-12'>
-      {{#if isUpdateSelected}}
-        {{weekly-workout/update-workout-form updateWorkout='updateWorkout'}}
-      {{/if}}
-    </div>
   </section>
 {{/each}}
 <div class='col-md-12'>
-  {{weekly-workout/workout-form createWorkout='createWorkout'}}
+  {{#if isUpdateSelected}}
+    {{weekly-workout/update-workout-form updateWorkout='updateWorkout'}}
+  {{/if}}
 </div>
