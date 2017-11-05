@@ -11,6 +11,17 @@ export default Ember.Route.extend({
     },
     deleteWorkout(workout) {
       workout.destroyRecord();
+    },
+    updateWorkout(updatedWorkout, id) {
+      this.get('store').findRecord('workout', id)
+        .then((workout) => {
+          workout.set('week', updatedWorkout.week);
+          workout.set('day', updatedWorkout.day);
+          workout.set('exercise', updatedWorkout.exercise);
+          workout.set('sets', updatedWorkout.sets);
+          workout.set('reps', updatedWorkout.reps);
+          workout.save();
+        })
+      }
     }
-  }
 });
