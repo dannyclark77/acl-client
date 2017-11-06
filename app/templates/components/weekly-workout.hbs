@@ -3,27 +3,5 @@
   {{weekly-workout/workout-form createWorkout='createWorkout'}}
 </div>
 {{#each model as |workout|}}
-  <section id={{workout.id}} class='workouts'>
-    <div class='col-md-2'>
-      <button type='button' class='btn btn-danger btn-sm' {{action 'deleteWorkout' workout}}>Delete</button>
-      <button type='button' class='btn btn-secondary btn-sm' {{action 'toggleUpdateForm' workout}}>Update</button>
-    </div>
-    <div class='col-md-3'>
-      <p>Day: {{workout.day}}</p>
-    </div>
-    <div class='col-md-3'>
-      <p>Exercise: {{workout.exercise}}</p>
-    </div>
-    <div class='col-md-2'>
-      <p>Sets: {{workout.sets}}</p>
-    </div>
-    <div class='col-md-2'>
-      <p>Reps: {{workout.reps}}</p>
-    </div>
-  </section>
+  {{weekly-workout/workout workout=workout deleteWorkout='deleteWorkout' updateWorkout='updateWorkout'}}
 {{/each}}
-<div class='col-md-12'>
-  {{#if isUpdateSelected}}
-    {{weekly-workout/update-workout-form updateWorkout='updateWorkout' day=day}}
-  {{/if}}
-</div>

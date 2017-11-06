@@ -1,19 +1,19 @@
 <h5>Update workout</h5>
 <form {{action 'updateWorkout' on='submit'}}>
   <div class='workout-form'>
-    {{input placeholder='Week' value=updatedWorkout.week maxlength="2"}}
+    {{input placeholder='Week' value=workout.week maxlength="2"}}
   </div>
   <div class='workout-form'>
-    {{input placeholder='Day of the Week' value=updatedWorkout.day maxlength="9"}}
+    {{input placeholder='Day of the Week' value=workout.day maxlength="9"}}
   </div>
   <div class='workout-form'>
-    {{input placeholder='Exercise' value=updatedWorkout.exercise maxlength="30"}}
+    {{input placeholder='Exercise' value=workout.exercise maxlength="30"}}
   </div>
   <div class='workout-form'>
-    {{input placeholder='Number of Sets' value=updatedWorkout.sets maxlength="5"}}
+    {{input placeholder='Number of Sets' value=workout.sets maxlength="5"}}
   </div>
   <div class='workout-form'>
-    {{input placeholder='Number of Reps' value=updatedWorkout.reps maxlength="5"}}
+    {{input placeholder='Number of Reps' value=workout.reps maxlength="5"}}
   </div>
   <button class='btn btn-primary' type='submit'>Save</button>
 </form>
