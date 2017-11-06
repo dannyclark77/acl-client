@@ -1,8 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  id: Ember.inject.service(),
   model () {
-    return this.get('store').findAll('workout');
+    return {
+      model1: this.get('store').findAll('workout'),
+      model2: this.get('id').number
+    }
   },
   actions: {
     createWorkout(workout) {
