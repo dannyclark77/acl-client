@@ -1,0 +1,7 @@
+<h4>Weeks Post-Surgery: </h4>
+<div class='workout col-md-12'>
+  {{weekly-workout/workout-form createWorkout='createWorkout'}}
+</div>
+{{#each model as |workout|}}
+  {{weekly-workout/workout workout=workout deleteWorkout='deleteWorkout' updateWorkout='updateWorkout'}}
+{{/each}}

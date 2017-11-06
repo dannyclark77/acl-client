@@ -1,2 +1,21 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+.workout {
+  margin: 0 0 10px;
+}
+
+.workout-form {
+  float: left;
+}
+
+.btn {
+  clear: both;
+}
+
+.workouts {
+  padding: 0 0 25px 0;
+  margin: 10px 0;
+  height: auto;
+  clear: both;
+}

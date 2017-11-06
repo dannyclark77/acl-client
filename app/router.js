@@ -10,6 +10,9 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
+  this.route('welcome');
+  this.route('weeks');
+  this.route('week', { path: '/weeks/:id' });
 });
 
 export default Router;

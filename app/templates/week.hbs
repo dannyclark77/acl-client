@@ -1,0 +1,24 @@
+<div class='col-md-3'>
+  <h4>Month: </h4>
+  <br />
+  <div class='col-md-6'>
+    <p>Placeholder: Previous Month</p>
+  </div>
+  <div class='col-md-6'>
+    <p>Placeholder: Next Month</p>
+  </div>
+  <br />
+  <div class='col-md-12'>
+    <h6>Starting Place: </h6>
+    <h6>Ending Place: </h6>
+    <h6>Exercises: </h6>
+  </div>
+</div>
+<div class='col-md-9'>
+  {{weekly-workout
+      model=model
+      createWorkout='createWorkout'
+      deleteWorkout='deleteWorkout'
+      updateWorkout='updateWorkout'
+    }}
+</div>
