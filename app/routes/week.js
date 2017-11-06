@@ -22,6 +22,6 @@ export default Ember.Route.extend({
           workout.set('reps', updatedWorkout.reps);
           workout.save();
         })
-      }
+      },
     }
 });

@@ -3,10 +3,15 @@ import { storageFor } from 'ember-local-storage';
 
 export default Ember.Component.extend({
   workouts: storageFor('workouts'),
+  day: Ember.computed('workouts.data.day', function(){
+    return this.get('workouts.data.day');
+  }),
   actions: {
     toggleUpdateForm (target) {
-      this.set('workouts', target.id);
+      console.log('target.data is ', target.data);
+      this.set('workouts', target);
       console.log('Storage workouts get is ', this.get('workouts'));
+      console.log('day is ', this.get('day'));
       return this.toggleProperty('isUpdateSelected');
     },
     createWorkout(workout) {
@@ -17,7 +22,7 @@ export default Ember.Component.extend({
       return this.sendAction('deleteWorkout', workout);
     },
     updateWorkout(workout) {
-      const storageID = this.get('workouts');
+      const storageID = this.get('workouts.id');
       console.log('Workout is ', workout);
       // console.log('updated workout is ', workout);
       // console.log('ID is ', id);
