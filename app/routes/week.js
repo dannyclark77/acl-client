@@ -1,9 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model () {
-    return this.get('store').findAll('workout');
+  // id: Ember.inject.service(),
+  model (params) {
+    return this.get('store').findAll('workout')
+            .then((workouts) => workouts.filter((workout) => {
+            return workout.get('week') === parseInt(params.id)
+          }))
   },
+  // model (params) {
+  //   return {
+  //     model1: this.get('store').query('workout', params),
+  //     model2: this.get('id').number
+  //   }
+  // },
   actions: {
     createWorkout(workout) {
       let newWorkout = this.get('store').createRecord('workout', workout);
