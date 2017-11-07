@@ -1,13 +1,5 @@
 <div class='col-md-3'>
   <h4>Month: </h4>
-  <br />
-  <div class='col-md-6'>
-    <p>Placeholder: Previous Month</p>
-  </div>
-  <div class='col-md-6'>
-    <p>Placeholder: Next Month</p>
-  </div>
-  <br />
   <div class='col-md-12'>
     <h6>Starting Place: </h6>
     <h6>Ending Place: </h6>
@@ -16,8 +8,8 @@
 </div>
 <div class='col-md-9'>
   {{weekly-workout
-      workout=model.model1
-      number=model.model2
+      workout=model
+      num=model.[0].week
       createWorkout='createWorkout'
       deleteWorkout='deleteWorkout'
       updateWorkout='updateWorkout'
