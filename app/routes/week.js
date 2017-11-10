@@ -8,6 +8,7 @@ export default Ember.Route.extend({
       prevWeek: params.id - 1,
       nextWeek: ++params.id,
       exercises: this.get('store').query('exercise', {week: params.id}),
+      goals: this.get('store').query('goal', {week: params.id})
     });
   },
   actions: {

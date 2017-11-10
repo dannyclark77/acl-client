@@ -1,15 +1,13 @@
 <div class='col-md-3'>
-  {{!-- <h4>Month: </h4>
-  <div class='col-md-12'>
-    <h6>Starting Place: </h6>
-    <h6>Ending Place: </h6>
-    <h6>Exercises: </h6>
-  </div> --}}
-  {{#each model.exercises as |exercise|}}
-    <ul>
-      <li>{{exercise.exercise_name}}</li>
-    </ul>
+  {{#each model.goals as |goal|}}
+    <h4>Goal for This Week: <br /><br />{{goal.goal}}</h4>
   {{/each}}
+    <div class='col-md-12'>
+      <h5>Potential Exercises to Reach Goal: </h5>
+  {{#each model.exercises as |exercise|}}
+        <ul>{{exercise.exercise_name}}</ul>
+  {{/each}}
+    </div>
 </div>
 <div class='col-md-9'>
   {{weekly-workout
