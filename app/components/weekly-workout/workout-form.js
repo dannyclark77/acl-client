@@ -16,6 +16,7 @@ export default Ember.Component.extend({
       this.set('newWorkout.exercise', null);
       this.set('newWorkout.sets', null);
       this.set('newWorkout.reps', null);
+      this.sendAction('sessionChanged');
     }
   }
 });

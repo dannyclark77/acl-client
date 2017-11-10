@@ -1,19 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // id: Ember.inject.service(),
   model (params) {
-    return this.get('store').findAll('workout')
-            .then((workouts) => workouts.filter((workout) => {
-            return workout.get('week') === parseInt(params.id)
-          }))
+    return Ember.RSVP.hash({
+      workouts: this.get('store').query('workout', {week: params.id}),
+      week: params.id,
+      prevWeek: params.id - 1,
+      nextWeek: ++params.id,
+      exercises: this.get('store').query('exercise', {week: params.id}),
+    });
   },
-  // model (params) {
-  //   return {
-  //     model1: this.get('store').query('workout', params),
-  //     model2: this.get('id').number
-  //   }
-  // },
   actions: {
     createWorkout(workout) {
       let newWorkout = this.get('store').createRecord('workout', workout);
@@ -33,5 +29,8 @@ export default Ember.Route.extend({
           workout.save();
         })
       },
+      sessionChanged() {
+        this.refresh();
+      }
     }
 });

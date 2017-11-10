@@ -5,13 +5,21 @@
     <h6>Ending Place: </h6>
     <h6>Exercises: </h6>
   </div> --}}
+  {{#each model.exercises as |exercise|}}
+    <ul>
+      <li>{{exercise.exercise_name}}</li>
+    </ul>
+  {{/each}}
 </div>
 <div class='col-md-9'>
   {{weekly-workout
-      workout=model
-      num=model.[0].week
+      workout=model.workouts
+      week=model.week
+      prevWeek=model.prevWeek
+      nextWeek=model.nextWeek
       createWorkout='createWorkout'
       deleteWorkout='deleteWorkout'
       updateWorkout='updateWorkout'
+      sessionChanged='sessionChanged'
     }}
 </div>
