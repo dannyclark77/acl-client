@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  model () {
+    return this.get('store').query('exercise', {week: 2})
+  },
   id: Ember.inject.service(),
   actions: {
     submitWeek (week) {

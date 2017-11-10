@@ -5,6 +5,11 @@
     <h6>Ending Place: </h6>
     <h6>Exercises: </h6>
   </div> --}}
+  {{#each model.exercises as |exercise|}}
+    <ul>
+      <li>{{exercise.exercise_name}}</li>
+    </ul>
+  {{/each}}
 </div>
 <div class='col-md-9'>
   {{weekly-workout
