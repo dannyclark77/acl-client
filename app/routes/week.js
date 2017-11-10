@@ -32,5 +32,8 @@ export default Ember.Route.extend({
           workout.save();
         })
       },
+      sessionChanged() {
+        this.refresh();
+      }
     }
 });

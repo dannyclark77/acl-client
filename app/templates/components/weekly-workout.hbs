@@ -6,8 +6,8 @@
   <button type='button' class='btn btn-primary btn-sm'>{{#link-to 'week' nextWeek class='link-to'}}Next Week{{/link-to}}</button>
 </div>
 <div class='workout col-md-12'>
-  {{weekly-workout/workout-form createWorkout='createWorkout'}}
+  {{weekly-workout/workout-form createWorkout='createWorkout' sessionChanged='sessionChanged'}}
 </div>
 {{#each sortedWorkout as |workout|}}
-  {{weekly-workout/workout workout=workout deleteWorkout='deleteWorkout' updateWorkout='updateWorkout'}}
+  {{weekly-workout/workout workout=workout deleteWorkout='deleteWorkout' updateWorkout='updateWorkout' sessionChanged='sessionChanged'}}
 {{/each}}
