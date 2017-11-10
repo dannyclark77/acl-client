@@ -8,10 +8,6 @@ export default Ember.Route.extend({
       prevWeek: params.id - 1,
       nextWeek: ++params.id,
     });
-    // return this.get('store').findAll('workout')
-    //         .then((workouts) => workouts.filter((workout) => {
-    //         return workout.get('week') === parseInt(params.id)
-    //       }))
   },
   actions: {
     createWorkout(workout) {
