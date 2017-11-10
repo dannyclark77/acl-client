@@ -8,8 +8,10 @@
 </div>
 <div class='col-md-9'>
   {{weekly-workout
-      workout=model
-      num=model.[0].week
+      workout=model.workouts
+      week=model.week
+      prevWeek=model.prevWeek
+      nextWeek=model.nextWeek
       createWorkout='createWorkout'
       deleteWorkout='deleteWorkout'
       updateWorkout='updateWorkout'
