@@ -21,9 +21,6 @@ export default Ember.Component.extend({
     },
     updateWorkout(workout, id) {
       return this.sendAction('updateWorkout', workout, id);
-    },
-    sessionChanged() {
-      return this.sendAction('sessionChanged');
     }
   }
 });
