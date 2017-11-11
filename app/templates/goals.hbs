@@ -1,0 +1,9 @@
+<h4 class='goals-header'>This is a full list of the weekly goals for ACL recovery</h4>
+<div class='goals'>
+{{#each model as |goal|}}
+  <ul class='goals-list'>
+    <li><strong>Week:</strong> {{goal.week}}</li>
+    <li><strong>Goal:</strong> {{goal.goal}}</li>
+  </ul>
+{{/each}}
+</div>

@@ -1,22 +1,24 @@
-<div class='col-md-3'>
-  {{#each model.goals as |goal|}}
-    <h4>Goal for This Week: <br /><br />{{goal.goal}}</h4>
-  {{/each}}
-    <div class='col-md-12'>
-      <h5>Potential Exercises to Reach Goal: </h5>
-  {{#each model.exercises as |exercise|}}
-        <ul>{{exercise.exercise_name}}</ul>
-  {{/each}}
-    </div>
-</div>
-<div class='col-md-9'>
-  {{weekly-workout
-      workout=model.workouts
-      week=model.week
-      prevWeek=model.prevWeek
-      nextWeek=model.nextWeek
-      createWorkout='createWorkout'
-      deleteWorkout='deleteWorkout'
-      updateWorkout='updateWorkout'
-    }}
+<div class='col-md-12 week-div'>
+  <div class='col-md-3 goal-exercise'>
+    {{#each model.goals as |goal|}}
+      <h4 class='goal'>Goal:<br />{{goal.goal}}</h4>
+    {{/each}}
+      <div class='col-md-12'>
+        <h5>Potential Exercises to Reach Goal: </h5>
+    {{#each model.exercises as |exercise|}}
+          <ul>{{exercise.exercise_name}}</ul>
+    {{/each}}
+      </div>
+  </div>
+  <div class='col-md-9'>
+    {{weekly-workout
+        workout=model.workouts
+        week=model.week
+        prevWeek=model.prevWeek
+        nextWeek=model.nextWeek
+        createWorkout='createWorkout'
+        deleteWorkout='deleteWorkout'
+        updateWorkout='updateWorkout'
+      }}
+  </div>
 </div>
