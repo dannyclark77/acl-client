@@ -13,6 +13,7 @@ Router.map(function () {
   this.route('welcome');
   this.route('weeks');
   this.route('week', { path: '/weeks/:id' });
+  this.route('goals');
 });
 
 export default Router;

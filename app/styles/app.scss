@@ -56,6 +56,34 @@ h5 {
 }
 
 .welcome {
+  margin: 30px 0 0;
   font-family: 'Libre Baskerville', serif;
   font-weight: 700;
+}
+
+.goals {
+  column-count: 3;
+  column-rule: 2px solid #D033EF;
+}
+
+.goals-list {
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+.goals-header {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.week-div {
+  margin: 20px 0;
+}
+
+.navbar-brand {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.goal-exercise {
+  border-right: 2px solid #428bca;
 }
