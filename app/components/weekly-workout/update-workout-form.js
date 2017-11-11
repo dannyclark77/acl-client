@@ -15,7 +15,6 @@ export default Ember.Component.extend({
       this.get('updatedWorkout').sets = this.get('updatedSets');
       this.get('updatedWorkout').reps = this.get('updatedReps');
       this.sendAction('updateWorkout', this.get('updatedWorkout'), this.get('workout.id'));
-      this.sendAction('sessionChanged');
     }
   }
 });
