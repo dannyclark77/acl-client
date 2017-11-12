@@ -63,21 +63,6 @@ mistakenly add it.
 
 Install with 'npm install', 'bower install', and 'bundle install'
 
-## API end-points
-
-| Verb   | URI Pattern            | Controller#Action |
-|--------|------------------------|-------------------|
-| POST   | `/sign-up`             | `users#signup`    |
-| POST   | `/sign-in`             | `users#signin`    |
-| DELETE | `/sign-out/:id`        | `users#signout`   |
-| PATCH  | `/change-password/:id` | `users#changepw`  |
-| GET    | `/workouts`            | `workouts#index`  |
-| POST   | `/workouts`            | `workouts#create` |
-| PATCH  | `/workouts/:id`        | `workouts#update` |
-| DELETE | `/workouts/:id`        | `workouts#destroy`|
-| GET    | `/exercises`           | `exercises#index` |
-| GET    | `/goals`               | `goals#index`     |
-
 ## Technologies Used
 
 - Ember
