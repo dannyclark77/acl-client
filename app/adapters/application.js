@@ -1,4 +1,4 @@
-import ENV from 'acl-front-end/config/environment';
+import ENV from 'acl-client/config/environment';
 import ActiveModelAdapter from 'active-model-adapter';
 
 import Ember from 'ember';

@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   var ENV = {
-    modulePrefix: 'acl-front-end',
+    modulePrefix: 'acl-client',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -49,7 +49,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/acl-front-end';
+    ENV.rootURL = '/acl-client';
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://gruesome-eyeballs-71988.herokuapp.com'
   }
