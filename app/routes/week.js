@@ -5,11 +5,11 @@ export default Ember.Route.extend({
   model (params) {
     return Ember.RSVP.hash({
       workouts: this.get('store').query('workout', {week: params.id}),
+      exercises: this.get('store').query('exercise', {week: params.id}),
+      goals: this.get('store').query('goal', {week: params.id}),
       week: params.id,
       prevWeek: params.id - 1,
-      nextWeek: ++params.id,
-      exercises: this.get('store').query('exercise', {week: params.id}),
-      goals: this.get('store').query('goal', {week: params.id})
+      nextWeek: ++params.id
     });
   },
   actions: {
